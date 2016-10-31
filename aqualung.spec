@@ -6,13 +6,13 @@
 %if 0%{nonfree}
 # "Monkey's Audio Source Code License Agreement" is nonfree license.
 %global         with_mac  --with-mac
+%global		with_lame --with-lame
 %endif
 
 %if 0%{free}
 # The following packages are free license (patent issue).
 %global         with_mpeg --with-mpeg
 %global         with_lavc --with-lavc
-%global         with_lame --with-lame
 %endif
 
 Name:           aqualung
