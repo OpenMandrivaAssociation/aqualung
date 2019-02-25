@@ -127,7 +127,7 @@ update-desktop-database &> /dev/null || :
 %doc AUTHORS ChangeLog README COPYING 
 %{_bindir}/%{name}
 %dir %{_datadir}/%{name}/
-%{_datadir}/doc/aqualung/aqualung*
+%{_datadir}/doc/aqualung/*
 %{_datadir}/%{name}/*
 %{_datadir}/man/man1/%{name}.*
 %{_datadir}/applications/%{name}.desktop
