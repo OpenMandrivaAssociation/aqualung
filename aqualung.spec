@@ -124,9 +124,10 @@ update-desktop-database &> /dev/null || :
 
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog README COPYING *css *dtd *xml *xsl *eps *sh *png
+%doc AUTHORS ChangeLog README COPYING 
 %{_bindir}/%{name}
 %dir %{_datadir}/%{name}/
+%{_datadir}/doc/aqualung/aqualung*
 %{_datadir}/%{name}/*
 %{_datadir}/man/man1/%{name}.*
 %{_datadir}/applications/%{name}.desktop
