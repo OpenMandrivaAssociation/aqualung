@@ -105,7 +105,7 @@ sed -i 's@/usr/lib/@%{_libdir}/@g' src/plugin.c
 %make_build
 
 %install
-make_install DESTDIR=%{buildroot} INSTALL="%{__install} -p -c"
+make install DESTDIR=%{buildroot} INSTALL="%{__install} -p -c"
 
 desktop-file-install --dir %{buildroot}%{_datadir}/applications %{SOURCE1}
 
