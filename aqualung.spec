@@ -17,7 +17,7 @@
 
 Name:           aqualung
 Version:        1.0
-Release:        2
+Release:        3
 Summary:        Music Player for GNU/Linux
 Group:          Sound
 License:        GPLv2+
@@ -61,6 +61,7 @@ BuildRequires:  pkgconfig(libcddb)
 BuildRequires:  pkgconfig(libusb)
 BuildRequires:  libifp-devel
 BuildRequires:  lua5.2-devel
+BuildRequires:  pkgconfig(raptor2)
 
 %description
 Aqualung is an advanced music player originally targeted at the GNU/Linux
@@ -101,10 +102,10 @@ inserting no gaps between adjacent tracks.
 # Fix lib64 path
 sed -i 's@/usr/lib/@%{_libdir}/@g' src/plugin.c
 
-%make
+%make_build
 
 %install
-make install DESTDIR=%{buildroot} INSTALL="%{__install} -p -c"
+make_install DESTDIR=%{buildroot} INSTALL="%{__install} -p -c"
 
 desktop-file-install --dir %{buildroot}%{_datadir}/applications %{SOURCE1}
 
