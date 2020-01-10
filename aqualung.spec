@@ -71,7 +71,7 @@ inserting no gaps between adjacent tracks.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure \
