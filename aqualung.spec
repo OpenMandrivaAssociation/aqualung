@@ -21,7 +21,7 @@ Release:        3
 Summary:        Music Player for GNU/Linux
 Group:          Sound
 License:        GPLv2+
-URL:            http://aqualung.jeremyevans.net/
+URL:            https://aqualung.jeremyevans.net/
 Source0:        https://github.com/jeremyevans/aqualung/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.desktop
 Patch1:		aqualung-1.0-ffmpeg3.patch
