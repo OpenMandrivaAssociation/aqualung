@@ -1,0 +1,20 @@
+diff -up aqualung-1.2/configure.ac.omv~ aqualung-1.2/configure.ac
+--- aqualung-1.2/configure.ac.omv~	2025-02-14 01:02:36.625799575 +0100
++++ aqualung-1.2/configure.ac	2025-02-14 01:03:05.019690420 +0100
+@@ -398,6 +398,7 @@ AQUALUNG_DETECT([cddb], [Compact Disc Da
+ ])
+ 
+ AQUALUNG_DETECT([lua], [Lua Extension],
++    [PKG_CHECK_MODULES([lua], [luajit],
+     [PKG_CHECK_MODULES([lua], [lua5.2],
+         [AQUALUNG_FOUND([lua])],
+         [PKG_CHECK_MODULES([lua], [lua-5.2],
+@@ -414,7 +415,7 @@ AQUALUNG_DETECT([lua], [Lua Extension],
+                                 [AQUALUNG_FOUND([lua])],
+                                     [PKG_CHECK_MODULES([lua], [lua >= 5.1],
+                                     [AQUALUNG_FOUND([lua])],
+-                                [AQUALUNG_MISSING([lua], [$lua_PKG_ERRORS])])])])])])])])])])
++                                [AQUALUNG_MISSING([lua], [$lua_PKG_ERRORS])])])])])])])])])])])
+ 
+ 
+ # Compiler and linker variables.

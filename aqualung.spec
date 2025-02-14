@@ -68,6 +68,9 @@ operating system. It plays audio CDs, internet radio streams and pod casts as
 well as sound files in just about any audio format and has the feature of
 inserting no gaps between adjacent tracks.
 
+%patchlist
+aqualung-luajit.patch
+
 %prep
 %autosetup -p1
 ./autogen.sh
