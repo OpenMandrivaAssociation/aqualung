@@ -17,7 +17,7 @@
 
 Name:           aqualung
 Version:        1.2
-Release:        1
+Release:        2
 Summary:        Music Player for GNU/Linux
 Group:          Sound
 License:        GPLv2+
