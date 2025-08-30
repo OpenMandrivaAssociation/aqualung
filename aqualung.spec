@@ -18,7 +18,7 @@
 Summary:		Music Player for GNU/Linux
 Name:		aqualung
 Version:		2.0
-Release:		2
+Release:		3
 License:		GPLv2+
 Group:	Sound
 Url:		https://aqualung.jeremyevans.net/
