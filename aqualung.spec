@@ -24,6 +24,8 @@ Group:	Sound
 Url:		https://aqualung.jeremyevans.net/
 Source0:	https://github.com/jeremyevans/aqualung/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Patch0:	aqualung-luajit.patch
+Patch1:	aqualung-2.0-fix-build-against-ffmpeg8.patch
 # autogen.sh
 BuildRequires:		autoconf
 BuildRequires:		automake
@@ -91,16 +93,12 @@ inserting no gaps between adjacent tracks.
 
 #-----------------------------------------------------------------------------
 
-%patchlist
-aqualung-luajit.patch
-
-
 %prep
 %autosetup -p1
-./autogen.sh
 
 
 %build
+./autogen.sh
 %configure \
     --with-sndio \
     --with-oss \

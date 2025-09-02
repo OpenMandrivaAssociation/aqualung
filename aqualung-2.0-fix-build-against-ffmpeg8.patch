@@ -1,0 +1,12 @@
+diff -rupN aqualung-2.0.old/src/decoder/dec_lavc.c aqualung-2.0/src/decoder/dec_lavc.c
+--- aqualung-2.0.old/src/decoder/dec_lavc.c	2025-02-14 09:17:58.000000000 +0100
++++ aqualung-2.0/src/decoder/dec_lavc.c	2025-09-02 21:04:31.760899598 +0200
+@@ -360,7 +360,7 @@ lavc_decoder_close(decoder_t * dec) {
+ 
+ 	lavc_pdata_t * pd = (lavc_pdata_t *)dec->pdata;
+ 
+-	avcodec_close(pd->avCodecCtx);
++	avcodec_free_context(&pd->avCodecCtx);
+ 
+ 	avformat_close_input(&pd->avFormatCtx);
+ 
