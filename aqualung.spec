@@ -27,6 +27,8 @@ Source1:	%{name}.desktop
 Patch0:	aqualung-luajit.patch
 Patch1:	aqualung-2.0-fix-build-against-ffmpeg8.patch
 # autogen.sh
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:		autoconf
 BuildRequires:		automake
 BuildRequires:		pkgconfig
